@@ -1,0 +1,171 @@
+:root {
+    --backprimary: #000000;
+    --backsecondary: #1a1a1a;
+    --backtertiary: #2a2a2a;
+    --foreprimary: #ce7688;
+    --foresecondary: #ba6a7b;
+    --highprimary: #c1b48e;
+    --highsecondary: #b5a985;
+    /* Остальные переменные доступны в системе */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+    /* 1. Меняем center на flex-start (прижать к верху) */
+    align-items: flex-start; 
+    
+    /* 2. Добавляем отступ сверху (подберите нужное число) */
+    padding-top: 30vh; 
+
+    background-image: url('img/background.gif');
+    background-position: center 45px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: var(--backprimary);
+    font-family: 'Hack';
+}
+
+.search-container {
+    background: rgba(26, 26, 26, 0.8); /* Используем backsecondary с прозрачностью */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--foretertiary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    width: 400px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 1px solid var(--backquaternary);
+    background-color: var(--backtertiary);
+    color: var(--highprimary);
+    outline: none;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: var(--backdecenary);
+}
+
+button {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--foreprimary);
+    color: var(--backprimary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--highprimary);
+}
+
+/* Стили для часов */
+.clock-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
+    padding: 15px 25px;
+    border-radius: 15px;
+    border-left: 4px solid var(--foreprimary); /* Акцент вашей палитры */
+    color: var(--highprimary);
+    font-family: 'Hack';
+    backdrop-filter: blur(5px); /* Эффект размытия фона за часами */
+    z-index: 100;
+}
+
+#time {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--highprimary);
+}
+
+#date {
+    font-size: 1rem;
+    color: var(--foresecondary); /* Используем розовый оттенок из вашей палитры */
+    margin-top: 5px;
+}
+
+/* Обертка для позиционирования */
+.bookmarks-wrapper {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Текст-ссылка под поиском */
+.bookmarks-trigger {
+    color: var(--highsecondary);
+    cursor: default;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    border-bottom: 1px dashed var(--backquaternary);
+}
+
+/* Панель с закладками (скрыта по умолчанию) */
+.bookmarks-panel {
+    position: absolute;
+    top: 35px; /* Появляется под словом Bookmarks */
+    display: flex;
+    gap: 15px;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 1px solid var(--foreoctonary);
+    backdrop-filter: blur(10px);
+    
+    /* Анимация скрытия */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+/* Показываем панель при наведении на обертку */
+.bookmarks-wrapper:hover .bookmarks-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.bookmarks-wrapper:hover .bookmarks-trigger {
+    color: var(--foreprimary);
+}
+
+/* Стили самих ссылок в панели */
+.bookmarks-panel a {
+    color: var(--highprimary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.bookmarks-panel a:hover {
+    color: var(--foreprimary);
+    transform: scale(1.1);
+}

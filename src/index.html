@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="clock-container">
+        <div id="time">00:00:00</div>
+        <div id="date">1 января, понедельник</div>
+    </div>
+
+    <div class="search-container">
+    <form action="https://www.google.com/search" method="GET">
+        <input type="text" name="q" placeholder="Поиск в Google..." autocomplete="off">
+        <button type="submit">Найти</button>
+    </form>
+    
+     <div class="bookmarks-wrapper">
+        <span class="bookmarks-trigger">Закладки</span>
+        <div class="bookmarks-panel">
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://shikimori.one" target="_blank">Shikimori</a>
+            <a href="https://www.backloggd.com" target="_blank">Backloggd</a>
+            <a href="https://drive.google.com" target="_blank">Google Drive</a>
+        </div>
+     </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
