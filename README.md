@@ -3,7 +3,7 @@ Homepage for Browsers inspired by [this](https://github.com/Ascaniolamp/Hyprlain
 
 ## License
 <div align="center">
-<strong>⚠️ I DO NOT OWN ANY RIGHTS TO THE GRAPHICS AND SOUNDS USED IN THIS PROJECT ⚠️</strong><br>
+<strong>⚠️ I DO NOT OWN ANY RIGHTS TO THE GRAPHICS AND MEDIA USED IN THIS PROJECT ⚠️</strong><br>
 <strong>THEY'RE THE PROPERTY OF THEIR CORRESPONDING OWNERS</strong><br>
 <strong><sup>THEREFORE, THEY AREN'T DISTRIBUTED UNDER ANY OF MY LICENSES</sup></strong>
 <br>
